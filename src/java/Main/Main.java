@@ -6,6 +6,7 @@ import flowerShop.Bouquet;
 import flowerShop.BouquetFactory;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
 @ManagedBean
 @SessionScoped
@@ -76,6 +77,10 @@ public class Main {
 
     private static int average(int min, int max) {
         return (min + max) / 2;
+    }
+
+    public void logout() {
+        FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
     }
 
 }

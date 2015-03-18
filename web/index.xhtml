@@ -39,10 +39,15 @@
                     <h:outputText value="#{main.bouquet.print()}" style="display: block;" escape="false"/>
                 </h:panelGroup>
             </h:form>
-            <h:outputText value="2" rendered="#{main.choose eq 2}"/>
+            <h:panelGroup id="showBouquet" layout="block" rendered="#{main.choose eq 2}">
+                <h:outputText value="You havn't bouquet. Please create it" rendered="#{main.bouquet == null}"/>
+                <h:outputText value="#{main.bouquet.print()}" escape="false" rendered="#{main.bouquet != null}"/>
+            </h:panelGroup>
             <h:outputText value="3" rendered="#{main.choose eq 3}"/>
         </h:panelGroup>
-
+        <h:form style="position: absolute; right: 10px; top: 10px;">
+            <h:commandButton value="logout" actionListener="#{main.logout()}"/>
+        </h:form>
     </h:body>
 </html>
 
