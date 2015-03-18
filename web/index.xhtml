@@ -24,7 +24,21 @@
                     <f:ajax execute="@this" render="@all"/>
                 </h:selectOneRadio>
             </h:form>
-            <h:outputText value="1" rendered="#{main.choose eq 1}"/>
+            <h:form id="getRandomBouquet" rendered="#{main.choose eq 1}">
+                <h:outputText value="Please enter min and max flowers in a bouquet" style="display: block;"/>
+                <h:outputText value="Min number"/>
+                <h:inputText value="#{main.minFlowers}" converterMessage="Min number is not a number"/>
+                <h:outputText value="you enter #{main.minFlowers}" rendered="#{!facesContext.validationFailed}"/>
+                <br/>
+                <h:outputText value="Max number"/>
+                <h:inputText value="#{main.maxFlowers}" converterMessage="Max number is not a number"/>
+                <h:outputText value="you enter #{main.maxFlowers}" rendered="#{!facesContext.validationFailed}"/>
+                <h:commandButton value="Get bouquet" actionListener="#{main.randomBouquet()}" style="display: block;"/>
+                <h:panelGroup layout="block" rendered="#{main.bouquet != null}">
+                    <h:outputText value="Bouquet has:" style="display: block;"/>
+                    <h:outputText value="#{main.bouquet.print()}" style="display: block;" escape="false"/>
+                </h:panelGroup>
+            </h:form>
             <h:outputText value="2" rendered="#{main.choose eq 2}"/>
             <h:outputText value="3" rendered="#{main.choose eq 3}"/>
         </h:panelGroup>

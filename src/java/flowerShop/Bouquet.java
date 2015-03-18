@@ -24,7 +24,7 @@ public class Bouquet {
     public Flower findFlower(int id) {
         for (Flower item : flowerList) {
             if (item.getId() == id) {
-               return item;
+                return item;
             }
         }
         throw new NoSuchElementException();
@@ -33,10 +33,11 @@ public class Bouquet {
     public String print() {
         String info = "";
         for (Flower item : flowerList) {
-            info += "\n\t" + item.getId() + ")"
+            info += "id = " + item.getId()
                     + " Color: " + item.getColor()
                     + ", Height: " + item.getHeight()
-                    + ", Fresh: " + item.getFresh();
+                    + ", Fresh: " + item.getFresh()
+                    + "<br/>";
         }
         return info;
     }

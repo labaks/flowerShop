@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class BouquetFactory {
 
-    public Bouquet getRandomBuket(int count) {
+    public Bouquet getRandomBouquet(int count) {
 
         Bouquet bouquet = new Bouquet();
         for (int i = 0; i < count; i++) {
