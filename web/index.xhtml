@@ -43,7 +43,11 @@
                 <h:outputText value="You havn't bouquet. Please create it" rendered="#{main.bouquet == null}"/>
                 <h:outputText value="#{main.bouquet.print()}" escape="false" rendered="#{main.bouquet != null}"/>
             </h:panelGroup>
-            <h:outputText value="3" rendered="#{main.choose eq 3}"/>
+            <h:form id="deleteFlower" rendered="#{main.choose eq 3}">
+                <h:outputText value="Enter id of flower what you want delete" style="display: block;"/>
+                <h:inputText value="#{main.enteredId}"/>
+                <h:commandButton value="delete" actionListener="#{main.deleteFlower()}"/>
+            </h:form>
         </h:panelGroup>
         <h:form style="position: absolute; right: 10px; top: 10px;">
             <h:commandButton value="logout" actionListener="#{main.logout()}"/>

@@ -18,6 +18,7 @@ public class Main {
     private Integer minFlowers;
     private Integer maxFlowers;
     private Bouquet bouquet = null;
+    private int enteredId;
 
     public User getUser() {
         return user;
@@ -63,10 +64,16 @@ public class Main {
         this.bouquet = bouquet;
     }
 
+    public int getEnteredId() {
+        return enteredId;
+    }
+
+    public void setEnteredId(int EnteredId) {
+        this.enteredId = EnteredId;
+    }
+
     public void auth() {
-
         authComplite = Auth.auth(user);
-
     }
 
     public void randomBouquet() {
@@ -77,6 +84,10 @@ public class Main {
 
     private static int average(int min, int max) {
         return (min + max) / 2;
+    }
+
+    public void deleteFlower() {
+        bouquet.delFlower(getEnteredId());
     }
 
     public void logout() {
