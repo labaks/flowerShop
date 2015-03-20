@@ -4,6 +4,10 @@ import auth.Auth;
 import auth.User;
 import flowerShop.Bouquet;
 import flowerShop.BouquetFactory;
+import flowerShop.Flower;
+import flowerShop.characteristics.Color;
+import java.util.Arrays;
+import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
@@ -19,6 +23,19 @@ public class Main {
     private Integer maxFlowers;
     private Bouquet bouquet = null;
     private int enteredId;
+    private Color color = Color.BLUE;
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public List<Color> getValues() {
+        return  Arrays.asList(Color.values());
+    }
 
     public User getUser() {
         return user;
@@ -84,10 +101,6 @@ public class Main {
 
     private static int average(int min, int max) {
         return (min + max) / 2;
-    }
-
-    public void deleteFlower() {
-        bouquet.delFlower(getEnteredId());
     }
 
     public void logout() {
