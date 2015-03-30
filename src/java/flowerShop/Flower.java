@@ -1,15 +1,9 @@
 package flowerShop;
 
 import flowerShop.characteristics.Color;
+import flowerShop.characteristics.Fresh;
 
 public class Flower {
-
-    public static enum Fresh {
-
-        NOT_FRESH,
-        FRESH,
-        VERY_FRESH
-    }
 
     private static int nextId = 1;
     private int id = 1;

@@ -1,6 +1,6 @@
 package flowerShop;
 
-import flowerShop.Flower.Fresh;
+import flowerShop.characteristics.Fresh;
 import flowerShop.characteristics.Color;
 import java.util.Random;
 
@@ -24,7 +24,7 @@ public class BouquetFactory {
         return values[nextInt];
     }
     private Fresh getRandomFresh() {
-        Flower.Fresh[] values = Flower.Fresh.values();
+        Fresh[] values = Fresh.values();
         Random rand = new Random();
         int nextInt = rand.nextInt(values.length);
         return values[nextInt];

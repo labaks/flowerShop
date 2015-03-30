@@ -4,8 +4,8 @@ import auth.Auth;
 import auth.User;
 import flowerShop.Bouquet;
 import flowerShop.BouquetFactory;
-import flowerShop.Flower;
 import flowerShop.characteristics.Color;
+import flowerShop.characteristics.Fresh;
 import java.util.Arrays;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
@@ -24,6 +24,18 @@ public class Main {
     private Bouquet bouquet = null;
     private int enteredId;
     private Color color = Color.BLUE;
+    private Fresh fresh = Fresh.FRESH;
+
+    public Fresh getFresh() {
+        return fresh;
+    }
+
+    public void setFresh(Fresh fresh) {
+        this.fresh = fresh;
+    }
+    public List<Fresh> getFreshValues() {
+        return  Arrays.asList(Fresh.values());
+    }
 
     public Color getColor() {
         return color;
@@ -33,7 +45,7 @@ public class Main {
         this.color = color;
     }
 
-    public List<Color> getValues() {
+    public List<Color> getColorValues() {
         return  Arrays.asList(Color.values());
     }
 

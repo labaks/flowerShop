@@ -50,6 +50,14 @@ input[type="submit"] {
     padding: 2px 0 2px 5px;
     margin-bottom: 3px;
 }
+.blockSelect {
+    background: white;
+    width: 100%;
+    border-radius: 5px;
+    height: 22px;
+    margin-bottom: 3px;
+    border: 1px solid black;
+}
 .blockButton {
     display: block;
     clear: both;
