@@ -98,3 +98,18 @@ th, td {
     right: 5px;
     top: 5px;
 }
+div#messages {
+    display: none;
+}
+#messages {
+    background: rgba(0, 0, 0, .5);
+    border: 1px solid red;
+    color: white;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+/*    position: absolute;
+    top: -45px;
+    right: 10px;*/
+    border-radius: 5px;
+}

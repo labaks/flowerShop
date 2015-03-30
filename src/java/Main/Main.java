@@ -4,6 +4,7 @@ import auth.Auth;
 import auth.User;
 import flowerShop.Bouquet;
 import flowerShop.BouquetFactory;
+import flowerShop.Flower;
 import flowerShop.characteristics.Color;
 import flowerShop.characteristics.Fresh;
 import java.util.Arrays;
@@ -21,10 +22,19 @@ public class Main {
     int choose = 0;
     private Integer minFlowers;
     private Integer maxFlowers;
-    private Bouquet bouquet = null;
+    private Bouquet bouquet = new Bouquet();
     private int enteredId;
     private Color color = Color.BLUE;
     private Fresh fresh = Fresh.FRESH;
+    private Integer height;
+
+    public Integer getHeight() {
+        return height;
+    }
+
+    public void setHeight(Integer height) {
+        this.height = height;
+    }
 
     public Fresh getFresh() {
         return fresh;
@@ -33,8 +43,9 @@ public class Main {
     public void setFresh(Fresh fresh) {
         this.fresh = fresh;
     }
+
     public List<Fresh> getFreshValues() {
-        return  Arrays.asList(Fresh.values());
+        return Arrays.asList(Fresh.values());
     }
 
     public Color getColor() {
@@ -46,7 +57,7 @@ public class Main {
     }
 
     public List<Color> getColorValues() {
-        return  Arrays.asList(Color.values());
+        return Arrays.asList(Color.values());
     }
 
     public User getUser() {
@@ -113,6 +124,10 @@ public class Main {
 
     private static int average(int min, int max) {
         return (min + max) / 2;
+    }
+
+    public Flower generetaNewFlower() {
+        return new Flower(color, height, fresh);
     }
 
     public void logout() {
