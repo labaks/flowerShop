@@ -19,11 +19,9 @@ public class Main {
 
     private User user = new User();
     boolean authComplite;
-    int choose = 0;
     private Integer minFlowers;
     private Integer maxFlowers;
     private Bouquet bouquet = new Bouquet();
-    private int enteredId;
     private Color color = Color.BLUE;
     private Fresh fresh = Fresh.FRESH;
     private Integer height;
@@ -72,14 +70,6 @@ public class Main {
         return authComplite;
     }
 
-    public int getChoose() {
-        return choose;
-    }
-
-    public void setChoose(int choose) {
-        this.choose = choose;
-    }
-
     public Integer getMinFlowers() {
         return minFlowers;
     }
@@ -102,14 +92,6 @@ public class Main {
 
     public void setBouquet(Bouquet bouquet) {
         this.bouquet = bouquet;
-    }
-
-    public int getEnteredId() {
-        return enteredId;
-    }
-
-    public void setEnteredId(int EnteredId) {
-        this.enteredId = EnteredId;
     }
 
     public void auth() {
