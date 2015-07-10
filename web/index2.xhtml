@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>audio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h1>test of sound formats</h1>
+
+        <div>ogg:<br />
+            <button onclick="playAudio()">Play</button>
+            <audio id="audio" controls="">
+                <source src="http://www.nch.com.au/acm/sample.ogg" type="audio/ogg"/>
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <script>
+            function playAudio() {
+                var audio = document.getElementById('audio');
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            }
+        </script>
+
+        <div>mp3:<br />
+            <audio controls="">
+                <source src="http://tekstopia.uio.no/flannor/wp-content/uploads/What-is-happening-here_-2.mp3" type="audio/mpeg"/>
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div>m4a:<br />
+            <audio controls="">
+                <source src="http://tekstopia.uio.no/flannor/wp-content/uploads/Testtext3.m4a" type="audio/m4a"/>
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div>wav:<br />
+            <audio controls=""> 
+                <source src="http://tekstopia.uio.no/flannor/wp-content/uploads/Testtext1.wav" type="audio/wav"/>
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div>amr:<br />
+            <audio controls="">
+                <source src="http://tekstopia.uio.no/flannor/wp-content/uploads/Flanner1.mp3.amr" type="audio/amr"/>
+                Your browser does not support the audio element.</audio>
+        </div>
+
+        <div>mp4:<br />
+            <audio controls="">
+                <source src="http://tekstopia.uio.no/w/wiki_no/audio/mp4/Gronland_kubaisi.m4a.mp4" type="audio/mp4"/>
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </body>
+</html>
